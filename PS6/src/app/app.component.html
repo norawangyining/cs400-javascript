@@ -1,0 +1,23 @@
+
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+
+<div>
+
+  <ul>
+    <li *ngFor="let bitcoin of bitcoins">
+      <label (click)="selectBitcoin(bitcoin)">{{bitcoin.name}}</label>
+    </li>
+  </ul>
+
+</div>
+
+<div *ng>
+  <!-- display selected contact -->
+  <h3>Details for {{selectedBitcoin.name}} </h3>
+  <input type="text" [(ngModel)]="selectedBitcoin.name">
+</div>
