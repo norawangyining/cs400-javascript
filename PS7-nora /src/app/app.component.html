@@ -1,0 +1,12 @@
+<h2>Welcome to {{ title }}!</h2>
+
+<button (click)="getBitcoins()">Get latest bitcoin price!</button>
+<p>
+
+
+<ul>
+  <li *ngFor="let bc of bitcoins">
+    {{bc.name}} | current price: {{bc.quote.USD.price}}
+  </li>
+
+</ul>
